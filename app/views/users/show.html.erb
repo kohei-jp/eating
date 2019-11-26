@@ -1,0 +1,23 @@
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1>Mypage <%= @user.name %></h1>
+        <% if @user.image? %>
+            <%= image_tag @user.image, :class => "mw50" %>
+          <% else %>
+            <%= image_tag("/images/icon/icon-mama-02-160px.png") %>
+          <% end %>
+          <div class="col-md-8">
+            
+        <p><span class="orange b"><%= @user.nickname %></span>
+        &nbsp;<%= @user.live %>
+        <% if @user.age.present? %> &nbsp;<%= @user.age %>代 <% end %>
+        </p>
+        <p class="orange b">自己紹介</p>
+        <p><%= @user.intro %></p>
+
+      </div>
+    </div>
+  </div>
+</div>
