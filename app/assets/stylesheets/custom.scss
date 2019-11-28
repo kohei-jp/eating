@@ -22,13 +22,14 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: url('bg-top.png');
+  background: url('bg-top.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
 }
+
 
 .top-hero-container {
   padding-top: 220px;
@@ -57,14 +58,40 @@ h1, h2 {
   background-size: cover;
   background-color: #464646;
 
-  .users-new-container {
-    padding-top: 220px;
+  .bkRGBA {
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+   
+    .users-new-container {
+      padding-top: 220px;
+      font-size: 25px;
+      
+    .picture {
+      width: 30px;
+      height: 30px;
+    }  
+      
+      // .mw50 {
+      //   width:100px;
+      //   height:100px;
+      // }
 
-    .form-group {
-      margin-bottom: 20px;
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      .text {
+        color: orange;
+      }
     }
   }
 }
+
+.bkRGBA {
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  }
+
 
 .navbar-transparent {
   margin-bottom: 0px;
@@ -88,4 +115,8 @@ h1, h2 {
   position: fixed;
   width: 100%;
   z-index: 10000;
+}
+
+.orange b {
+  color: #ff0000;
 }

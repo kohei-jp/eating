@@ -16,18 +16,20 @@ class UsersController < ApplicationController
     end
   end
   
-   private
-  def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
-  
   def show
     @user = User.find(params[:id])
     render :show
   end
   
   def edit
-   @user = User.find(params[:id])
+    @user = User.find(params[:id])
+        if @user.save
+           redirect_to root_path, success:'登録が完了しました'
+        else
+            flash.now[:denger] = '登録に失敗しました'
+            render :edit
+        end
+
   end
   
   def update
@@ -45,5 +47,11 @@ class UsersController < ApplicationController
         redirect_to root_url
     end
   end
+  
+   private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+  
 
 end
