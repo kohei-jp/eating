@@ -5,9 +5,9 @@
         <div class="col-md-offset-4 col-md-4 users-new-container">
             <h1>Mypage</h1>
             <% if @user.image? %>
-             <%= image_tag @user.image ,class="picture" %>
+             <%= image_tag '@user.image' ,class: "picture" %>
             <% else %>
-             <%= image_tag("/images/icon/icon-mama-02-160px.png") %>
+             <%= image_tag "icons/human.png" ,class: "picture" %>
             <% end %>
            <div class="col-md-8">
             <p><span class="text"><%= @user.name %></span>
@@ -16,9 +16,13 @@
             </p>
             <p class="text">自己紹介</p>
             <p><%= @user.intro %></p>
-           </div>
+         　</div>
+         　<div class="col-md-offset-3 col-md-3">
+         　 <%= link_to '編集', 'edit_user_path(user)', class :"btn btn-block btn-white" %>
+         　</div>
+         　   
+        </div>
       </div>
     </div>
-   </div>
   </div>
 </div>
