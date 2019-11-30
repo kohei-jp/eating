@@ -20,14 +20,14 @@ h1, h2 {
 }
 
 .top-hero-wrapper {
-  width: 100vw;
+
+  background-color: #464646;  width: 100vw;
   height: 100vh;
   background: url('bg-top.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
 }
 
 
@@ -52,7 +52,7 @@ h1, h2 {
   width: 100vw;
   height: 100vh;
   background-image: url('bg-top.png');
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

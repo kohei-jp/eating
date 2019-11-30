@@ -39,6 +39,7 @@ class UsersController < ApplicationController
         flash[:success] = 'ユーザー情報を編集しました。'
         render :edit
       else
+        # binding.pry
         flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
         render :edit
       end   
