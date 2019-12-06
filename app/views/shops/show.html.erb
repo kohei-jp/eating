@@ -7,7 +7,10 @@
            <div class="text-white">
            <% if @results.any? %>
            <% @results.each do |result| %>
-           <p><%= result.name %>　<%= result.genre %> <%= result.info%> <%= result.tell%></p>
+           <p><%= result.name %></p>
+           <p><%= result.genre %></p>
+           <p><%= result.info%> </p>
+           <p><%= result.tell%></p>
            <% end %>
           </div>
           <% end %>
