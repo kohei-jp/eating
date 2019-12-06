@@ -52,11 +52,14 @@ h1, h2 {
   width: 100vw;
   height: 100vh;
   background-image: url('bg-top.png');
+  position: -webkit-sticky;
+  position: sticky;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: ;
   background-size: cover;
   background-color: #464646;
+  // margin-bottom: 1000px;
 
   .bkRGBA {
     height: 100%;
@@ -121,3 +124,29 @@ h1, h2 {
 .orange b {
   color: #ff0000;
 }
+
+.btn-black {
+  color:#565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+  
+  &hover {
+    color: #565656;
+  }
+}
+  .review-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('bg-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  padding-top: 200px;
+  padding-bottom: 500px;
+  
+  }

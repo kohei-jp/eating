@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   get 'shops/index'
   get 'shops/search'
   get 'sessions/new'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   resources :shops
   get 'shops/show'
   resources :search
+  resources :reviews
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

@@ -7,10 +7,10 @@
            <div class="text-white">
            <% if @results.any? %>
            <% @results.each do |result| %>
-           <p><%= result.name %></p>
-           <p><%= result.genre %></p>
-           <p><%= result.info%> </p>
-           <p><%= result.tell%></p>
+           <p><%= link_to shop_path(shop_id:shop.id), "@results.name" %></p>
+           <!--<p><%= result.genre %></p>-->
+           <!--<p><%= result.info%> </p>-->
+           <!--<p><%= result.tell%></p>-->
            <% end %>
           </div>
           <% end %>
