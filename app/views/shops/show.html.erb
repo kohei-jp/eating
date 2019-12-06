@@ -1,0 +1,18 @@
+<div class="users-new-wrapper">
+  <div class="bkRGBA">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-4 col-md-6 users-new-container">
+          <h1>詳細ページ</h1>
+           <div class="text-white">
+           <% if @results.any? %>
+           <% @results.each do |result| %>
+           <p><%= result.name %>　<%= result.genre %> <%= result.info%> <%= result.tell%></p>
+           <% end %>
+          </div>
+          <% end %>
+        </div><!--users-new-container-->
+      </div><!--row-->
+    </div><!--container-->
+  </div><!--bkrgb-->
+</div><!--new-wrapper-->

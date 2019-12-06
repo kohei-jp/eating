@@ -3,22 +3,24 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-4 col-md-4 users-new-container">
-            <h1>Mypage</h1>
+            <h1 class="text-white">Mypage</h1>
             <% if @user.image? %>
              <%= image_tag '@user.image' ,class: "picture" %>
             <% else %>
-             <%= image_tag "icons/human.png" ,class: "picture" %>
+             <%= image_tag "icons/icon-eating.png" ,class: "picture" %>
             <% end %>
            <div class="col-md-8">
-            <p><span class="text"><%= @user.name %></span>
+            <p><span class="text-white"><%= @user.name %></span>
             &nbsp;<%= @user.live %>
             <% if @user.age.present? %> &nbsp;<%= @user.age %>代 <% end %>
             </p>
-            <p class="text">自己紹介</p>
+            <p class="text-white">自己紹介</p>
             <p><%= @user.intro %></p>
          　</div>
          　<div class="col-md-offset-8 col-md-4">
          　 <%= link_to '編集', edit_user_path(@user), class:"btn btn-block btn-white" %>
+         　 <%= link_to 'Search', shops_index_path, class:"btn btn-block btn-white" %>
+         　 
          　</div>
          　   
         </div><!--users-new-container-->

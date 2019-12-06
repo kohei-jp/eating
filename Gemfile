@@ -77,3 +77,5 @@ gem 'bcrypt'
 gem "carrierwave"
 
 gem 'devise'
+
+gem 'ransack'

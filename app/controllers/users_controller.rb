@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
         if @user.save
-          redirect_to root_path, success:'登録が完了しました'
+          # redirect_to root_path, success:'登録が完了しました'
         else
             flash.now[:denger] = '登録に失敗しました'
             render :edit
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     if current_user == @user
       if @user.update(user_params)
         flash[:success] = 'ユーザー情報を編集しました。'
-        render :edit
+        render :show
       else
         # binding.pry
         flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
