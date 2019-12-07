@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :shops
-  get 'shops/show'
+  get 'shops/result'
   resources :search
   resources :reviews
   

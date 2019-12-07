@@ -5,16 +5,16 @@
         <div class="col-md-offset-4 col-md-6 users-new-container">
             <h1 class="text-white" >飲食店検索</h1>
               <!--form_forのransack版-->
-　　　　　　  <%= search_form_for @search, url:shops_show_path do |f| %>
-              <!--#nameカラムに対して一致検索ができる-->
-              <%= f.label :name_cont, "店名："  %>
-              <%= f.search_field :name_eq %>
-              <br>
-              <%= f.label :genrenre_cont, "ジャンル："  %>
-              <%= f.select :genre_eq, [["",""],["居酒屋","居酒屋"],["定食屋","定食屋"],["中華","中華"],["ファストフード","ファストフード"],["洋食屋","洋食屋"],["ラーメン屋","ラーメン屋"]] %>
-              <!--検索ボタン-->
-              <div class="actions"><%= f.submit "検索" %></div>
-            <% end %>
+　　　　　　  <%= search_form_for @search, url:shops_result_path do |f| %>
+                <!--#nameカラムに対して一致検索ができる-->
+                <%= f.label :name_cont, "店名："  %>
+                <%= f.search_field :name_eq %>
+                <br>
+                <%= f.label :genrenre_cont, "ジャンル："  %>
+                <%= f.select :genre_eq, [["",""],["居酒屋","居酒屋"],["定食屋","定食屋"],["中華","中華"],["ファストフード","ファストフード"],["洋食屋","洋食屋"],["ラーメン屋","ラーメン屋"]] %>
+                <!--検索ボタン-->
+                <div class="actions"><%= f.submit "検索" %></div>
+              <% end %>
         </div><!--users-new-container-->
       </div><!--row-->
     </div><!--container-->
