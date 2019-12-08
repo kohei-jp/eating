@@ -10,9 +10,12 @@ class ShopsController < ApplicationController
   end
 
  def result
+   
  end
 
  def show
+  shop = Shop.find(shop.id)
+  # shop.shop_id = params[:shop_id]
  end
 
  

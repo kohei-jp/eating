@@ -3,18 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-4 col-md-6 users-new-container">
-          <h1>詳細ページです</h1>
+          <h1>検索結果</h1>
            <div class="text-white">
            <% if @results.any? %>
            <% @results.each do |result| %>
-           <p><%= result.name %></p>
-           <p><%= result.genre %></p>
-           <p><%= result.info%> </p>
-           <p><%= result.tell%></p>
-           <!--<p><%= link_to shop_path(shop_id:shop.id), "@results.name" %></p>-->
-           <p><%= result.genre %></p>
-           <!--<p><%= result.info%> </p>-->
-           <!--<p><%= result.tell%></p>-->
+           <p><%= link_to result.name, "shop_path(shop.id)" %></p>
            <% end %>
           </div>
           <% end %>
@@ -23,3 +16,4 @@
     </div><!--container-->
   </div><!--bkrgb-->
 </div><!--new-wrapper-->
+<!--,shop_path(shop_id:shop.id)-->
