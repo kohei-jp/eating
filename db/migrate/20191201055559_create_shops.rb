@@ -5,6 +5,7 @@ class CreateShops < ActiveRecord::Migration[5.2]
       t.string :genre
       t.string :info
       t.integer :tell
+      t.string :image
 
       t.timestamps
     end

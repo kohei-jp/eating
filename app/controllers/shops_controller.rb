@@ -13,8 +13,21 @@ class ShopsController < ApplicationController
  end
 
  def show
-  byebug
   @shop = Shop.find(params[:id])
+ end
+ 
+ def create
+    @shop = Shop.new(shop_params)
+    if @shop.save
+      redirect_to root_path, success:'登録が完了しました'
+    else
+      flash.now[:denger] = '登録に失敗しました'
+      render :shop_edit_path
+    end
+ end
+ 
+ def edit
+  
  end
  
 
@@ -25,6 +38,10 @@ class ShopsController < ApplicationController
  
  def set_results
    @results = @search.result(distinct:true)
-   byebug
  end
+ 
+  def shop_params
+    params.require(:shop).permit(:name, :genre, :info, :tell, :image, :image)
+  end
+  
 end

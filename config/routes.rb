@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   resources :users
   get 'shops/result'
+  get 'shops/edit'
   resources :shops
   resources :search
   resources :reviews

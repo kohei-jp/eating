@@ -20,12 +20,18 @@
           <%= link_to root_path do %>
           <span><%= image_tag "icons/logo.png", class:"navbar-brand" %></span>
           <% end %>
+          
           <ul class="nav navbar-nav navbar-right">
            <% if logged_in? %>
             <li>
             <li>
               <%= link_to reviews_new_path do %>
               <%= image_tag "icons/comment1.png" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to shops_edit_path do %>
+              <%= image_tag "icons/shop.png" %>
               <% end %>
             </li>
             <li>
@@ -38,6 +44,11 @@
               <%= link_to new_user_path do %>
                <%= image_tag "icons/register.png" %>
                <% end %>
+            </li>
+            <li>
+              <%= link_to shops_edit_path do %>
+              <%= image_tag "icons/shop.png" %>
+              <% end %>
             </li>
             <li>
               <%= link_to reviews_new_path do %>
