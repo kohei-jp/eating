@@ -2,19 +2,18 @@ class ShopsController < ApplicationController
   before_action :set_search, only: [:index, :result]
   before_action :set_results, only: [:index, :result]
   
-  def index
-     # 検索オブジェクト
-    # @search = Shop.ransack(params[:q])
-     # 検索結果を表示する@resultsオブジェクトを生成
-    # @results = @search.result(distinct:true)
-  end
+ def index
+ end
 
  def result
  end
-
+ 
  def show
   @shop = Shop.find(params[:id])
  end
+ 
+
+
  
  def create
     @shop = Shop.new(shop_params)
@@ -25,11 +24,38 @@ class ShopsController < ApplicationController
       render :shop_edit_path
     end
  end
- 
- def edit
-  
+
+ def new
+   @shop = Shop.new
  end
  
+  def edit
+    @shop = Shop.find(params[:id])
+        if @shop.save
+          # redirect_to root_path, success:'登録が完了しました'
+        else
+            flash.now[:denger] = '登録に失敗しました'
+            render :edit
+        end
+  end
+  
+  def update
+    @shop = Shop.find(params[:id])
+    #編集しようとしてるユーザーがログインユーザーとイコールかをチェック
+    if shop == @shop
+      # 右辺のshopが間違っている
+      if @shop.update(shop_params)
+        flash[:success] = 'お店情報を編集しました。'
+        render :show
+      else
+        # binding.pry
+        flash.now[:danger] = 'お店情報の編集に失敗しました。'
+        render :edit
+      end   
+    else
+        redirect_to root_url
+    end
+  end
 
  private
  def set_search

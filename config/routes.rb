@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
-  get 'reviews/new'
-  get 'shops/index'
-  get 'shops/search'
   get 'sessions/new'
-  # get 'users/new' ,to:"users#new" ,as: "new_user"
-  # post 'users/create' 
   get 'homes/help'
   # このURLだと、homeコントローラのindexアクションである事は明確だから、to:〜は記載不要
   root 'homes#index'
   
   resources :users
+  get 'shops/search'
   get 'shops/result'
-  get 'shops/edit'
   resources :shops
   resources :search
+  get 'reviews/new'
   resources :reviews
   
   get '/login', to: 'sessions#new'

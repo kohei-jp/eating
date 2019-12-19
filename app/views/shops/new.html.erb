@@ -1,0 +1,34 @@
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">Sign in</h1>
+        <%= form_for @shop do |f| %>
+          <div class="form-group">
+            <%= f.label :name, class: 'text-white' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :genre, class: 'text-white' %>
+            <%= f.select :genre, [["",""],["居酒屋","居酒屋"],["定食屋","定食屋"],["中華","中華"],["ファストフード","ファストフード"],["洋食屋","洋食屋"],["ラーメン屋","ラーメン屋"]] %>
+          </div>
+          <div class="form-group">
+          <%= f.label :info, '詳細情報（255文字未満）' , class: 'text-white' %>
+          <%= f.text_area :info, :maxlength => "255", :size => "80x5",  class: 'form-control'  %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :tell, class: "text-white" %>
+            <%= f.text_field :tell, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :画像をアップロード, class: "text-white" %>
+            <%= f.file_field :image, class: "form-control" %>
+          </div>
+
+          <%= f.submit "登録", class: 'btn-block btn-white' %>
+        <% end %>:
+      </div>
+    </div>
+  </div>
+</div>
