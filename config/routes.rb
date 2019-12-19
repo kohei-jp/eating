@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   get 'shops/search'
   get 'shops/result'
+  get 'shops/index'
   resources :shops
   resources :search
   get 'reviews/new'
