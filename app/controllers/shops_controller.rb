@@ -42,7 +42,7 @@ class ShopsController < ApplicationController
   def update
     @shop = Shop.find(params[:id])
     #編集しようとしてるユーザーがログインユーザーとイコールかをチェック
-    if shop == @shop
+    # if shop == @shop
       # 右辺のshopが間違っている
       if @shop.update(shop_params)
         flash[:success] = 'お店情報を編集しました。'
@@ -52,9 +52,9 @@ class ShopsController < ApplicationController
         flash.now[:danger] = 'お店情報の編集に失敗しました。'
         render :edit
       end   
-    else
-        redirect_to root_url
-    end
+    # else
+        # redirect_to root_url
+    # end
   end
 
  private
