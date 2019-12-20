@@ -4,10 +4,9 @@
       <div class="row">
         <div class="col-md-offset-4 col-md-6 users-new-container">
           <h1>詳細画面</h1>
-          
-          <% if @shop.image? %>
+          <p><% if @shop.image? %>
               <%= image_tag @shop.image.url, :size =>'80x80'  %>
-          <% end %>
+          <% end %></p>
           <p><%= @shop.name %></p>
           <p><%= @shop.genre %></p>
           <p><%= @shop.info %></p>

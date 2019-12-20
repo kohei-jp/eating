@@ -9,7 +9,7 @@ class ShopsController < ApplicationController
  end
  
  def show
-  @shop = Shop.find(params[:id])
+  @shop = Shop.find_by(params[:id])
  end
  
 
@@ -32,10 +32,10 @@ class ShopsController < ApplicationController
   def edit
     @shop = Shop.find(params[:id])
         if @shop.save
-          # redirect_to root_path, success:'登録が完了しました'
+        #   redirect_to root_path, success:'編集が完了しました'
         else
-            flash.now[:denger] = '登録に失敗しました'
-            render :edit
+        #     flash.now[:denger] = '登録に失敗しました'
+        #     render :edit
         end
   end
   

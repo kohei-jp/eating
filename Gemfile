@@ -36,6 +36,7 @@ gem 'bootstrap-sass'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+#railsの起動時の処理を最適化してくれて起動時間の短縮が可能なgem
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
